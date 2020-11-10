@@ -6,10 +6,25 @@
   @version 0.1
 */
 
-// Programme werden als Klassen bezeichnet
-// Klassenname und Dateiname müssen gleich sein!
+//  NOTE Programme werden als Klassen bezeichnet
+// NOTE Klassenname und Dateiname müssen gleich sein!
 public class Template { // Template ist der Name der Klasse
-  public static void main(String[] args) { // Jedes Programm braucht diese Methode, main ist die die als erstes ausgeführt wird
-    
+  /*
+    starts the execution
+
+    @param args command line arguments
+  */
+  public static void main(String[] args) { // NOTE Jedes Programm braucht diese Methode, main ist die die als erstes ausgeführt wird
+    Template program = new Template(); // NOTE Erzeuge ein neues OBJEKT (objekt genannt program) der KLASSE (klasse genannt Template)
+    program.run(); // NOTE Starte mit dem Objekt die Methode run
   }
+
+/*
+  runs the program
+*/
+
+  private void run() { // Methode genannt run
+    // TODO realize the program logic
+  }
+
 }

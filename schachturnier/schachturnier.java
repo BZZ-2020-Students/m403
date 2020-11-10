@@ -41,7 +41,7 @@ public class schachturnier { // NOTE public = jeder hat zugriff darauf
 
       while (winner > 2 || winner < 0) {
         System.out.print("Eingabe ist nicht korrekt, bitte gib entweder 0, 1 oder 2 ein! "); // NOTE tell the user he made a mistake -_-
-        System.out.print("Welcher Spieler hat gewonnen? (0/1/2) "); // NOTE tell user what he has to do
+        System.out.print("\nWelcher Spieler hat gewonnen? (0/1/2) "); // NOTE tell user what he has to do
         winner = Integer.parseInt(scanner.nextLine()); // NOTE get the input and store it in the variable (as integer)
       }
 
@@ -62,6 +62,7 @@ public class schachturnier { // NOTE public = jeder hat zugriff darauf
       timesPlayed++;
     } while (timesPlayed < MAX_ROUNDS);
 
+    // NOTE tell the user who won
     if (firstPlayerPoints > secondPlayerPoints) {
       System.out.print("Spieler 1 hat gewonnen!");
     } else if (firstPlayerPoints < secondPlayerPoints) {
@@ -69,5 +70,6 @@ public class schachturnier { // NOTE public = jeder hat zugriff darauf
     } else {
       System.out.print("Unentschieden!");
     }
+    System.out.print("\nSpieler 1 Punkte: " + firstPlayerPoints + "\nSpieler 2 Punkte: " + secondPlayerPoints);
   }
 }

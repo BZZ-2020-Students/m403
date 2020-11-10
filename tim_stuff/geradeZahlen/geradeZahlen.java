@@ -35,7 +35,7 @@ public class geradeZahlen {
     System.out.print("Bis wohin soll ich zaehlen? ");
     maxNumber = Integer.parseInt(scanner.nextLine());
 
-    while ((maxNumber < minNumber) > 0) {
+    while (maxNumber < minNumber) {
       System.out.print("Die zweite Zahl muss groesser sein wie die erste! ");
 
       System.out.print("Bis wohin soll ich zaehlen? ");

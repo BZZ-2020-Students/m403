@@ -35,6 +35,13 @@ public class rabbitAndChicken {
     System.out.print("Wieviele Beine hast du gezaehlt? ");
     countLegs = Integer.parseInt(scanner.nextLine());
 
+    while ((countLegs % 2) > 0) {
+      System.out.print("Die Anzahl der Beine darf nicht ungerade sein! ");
+
+      System.out.print("\nWieviele Beine hast du gezaehlt? ");
+      countLegs = Integer.parseInt(scanner.nextLine());
+    }
+
     System.out.print("Wieviele Tiere hast du gezaehlt? ");
     countRabbit = Integer.parseInt(scanner.nextLine());
 

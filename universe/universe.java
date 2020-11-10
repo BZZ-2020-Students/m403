@@ -1,27 +1,27 @@
 /*
-  
+  print "Hello Universe"
 
   @author Tim Irmler (Zwazel)
   @since 2020-11-10
   @version 0.1
 */
 
-public class template {
+public class universe { // NOTE public = jeder hat zugriff darauf
   /*
-    starts the execution
+    Starts the execution
 
-    @param args command line arguments
+    @param args
+              command line arguments
   */
   public static void main(String[] args) {
-    template program = new template();
+    universe program = new universe();
     program.run();
-
-/*
-  runs the program
-*/
-
-  private void run() {
-    // TODO realize the program logic
   }
 
+  /*
+    runs the program
+  */
+  private void run() { // Private = Keine andere Klasse hat darauf zugriff // Void = kein return
+    // TODO realize the program logic
+  }
 }

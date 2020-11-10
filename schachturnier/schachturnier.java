@@ -1,5 +1,5 @@
 /*
-  schachturnier
+  calculate who won in the schachturnier
 
   @author Tim Irmler (Zwazel)
   @since 2020-11-10
@@ -34,8 +34,9 @@ public class schachturnier { // NOTE public = jeder hat zugriff darauf
     final float DRAW_POINTS = (float) 0.5;
     final int MAX_ROUNDS = 5;
 
+    Scanner scanner = new Scanner(System.in); // NOTE create new Scanner object called scanner
+    
     do {
-      Scanner scanner = new Scanner(System.in); // NOTE create new Scanner object called scanner
       System.out.print("Welcher Spieler hat gewonnen? (0/1/2) "); // NOTE tell user what he has to do
       winner = Integer.parseInt(scanner.nextLine()); // NOTE get the input and store it in the variable (as integer)
 

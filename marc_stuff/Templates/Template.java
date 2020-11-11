@@ -1,25 +1,23 @@
-/* M403 1b
+/* M403
 *
 *@author Marc Andri Fuchs
 *@since 2020-11-10
 *@version 0.1
 */
 
-import java.util.Scanner; //Imports the Scanner (class)
-
-public class Template {
+public class Rechner {
 
   /*
   * starts the execution
   * @param args
   */
   public static void main(String[] args) {
-    Template program = new Template();
+    Rechner program = new Rechner();
     program.run();
   }
 
-  /* prints out Hello Universe*/
+  /**/
   private void run() {
-    
+
   }
 }

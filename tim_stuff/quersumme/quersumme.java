@@ -21,21 +21,25 @@ public class quersumme {
   }
 
   /*
-    runs the program
+    Berechnet die Quersumme einer uebergebenen Zahl
   */
   private void run() {
-    String givenText;
-    int countLetters = 0;
+    int givenZahl;
 
     Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Gib die Zahl ein: ");
-    givenText = scanner.nextLine();
+    System.out.print("Gib Zahl: ");
+    givenZahl = Integer.parseInt(scanner.nextLine());
 
-    for (;  countLetters < givenText.length(); countLetters++) {
+		int summe = 0;
+    int zahl = givenZahl;
+		while (0 != zahl) {
+			// addiere die letzte ziffer der uebergebenen zahl zur summe
+			summe = summe + (zahl % 10);
+			// entferne die letzte ziffer der uebergebenen zahl
+			zahl = zahl / 10;
+		}
 
-    }
-
-    System.out.println("Dein Wort hat " + countLetters + " Buchstaben");
+    System.out.println("Quersumme von " + givenZahl + " = " + summe);
   }
 }

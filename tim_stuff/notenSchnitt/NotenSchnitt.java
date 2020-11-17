@@ -33,7 +33,7 @@ public class NotenSchnitt {
 
   	for (int i = 0; i < amountMarcs; i++) {
       System.out.print("Note " + (i+1) + ": ");
-      int note = scanner.nextFloat();
+      float note = scanner.nextFloat();
 
       while (note < 1 || note > 6) {
         System.out.println("Die Note muss zwischen 1 und 6 liegen");

@@ -26,20 +26,26 @@ public class NotenSchnitt {
   private void run() {
     Scanner scanner = new Scanner(System.in);
 
-    int givenZahl;
+    System.out.print("Wie viele LBs willst du eingeben? ");
+    int amountMarcs = scanner.nextInt();
 
-    System.out.print("Gib Zahl: ");
-    givenZahl = Integer.parseInt(scanner.nextLine());
+    float summeNoten = 0;
 
-		int summe = 0;
-    int zahl = givenZahl;
-		while (0 != zahl) {
-			// addiere die letzte ziffer der uebergebenen zahl zur summe
-			summe = summe + (zahl % 10);
-			// entferne die letzte ziffer der uebergebenen zahl
-			zahl = zahl / 10;
-		}
+  	for (int i = 0; i < amountMarcs; i++) {
+      System.out.print("Note " + (i+1) + ": ");
+      int note = scanner.nextFloat();
 
-    System.out.println("Quersumme von " + givenZahl + " = " + summe);
+      while (note < 1 || note > 6) {
+        System.out.println("Die Note muss zwischen 1 und 6 liegen");
+        System.out.print("Note " + (i+1) + ": ");
+        note = scanner.nextFloat();
+      }
+
+      summeNoten += note;
+    }
+
+    float durchschnitt = summeNoten/amountMarcs;
+
+    System.out.print("Durchschnitt = " + durchschnitt);
   }
 }

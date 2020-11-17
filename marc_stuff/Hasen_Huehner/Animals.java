@@ -7,14 +7,14 @@
 
 import java.util.Scanner;
 
-public class Hasen_Huehner {
+public class Animals {
 
   /*
   * starts the execution
   * @param args
   */
   public static void main(String[] args) {
-    Hasen_Huehner program = new Hasen_Huehner();
+    Animals program = new Animals();
     program.run();
   }
 

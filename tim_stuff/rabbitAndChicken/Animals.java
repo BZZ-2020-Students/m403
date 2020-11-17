@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class RabbitAndChicken {
+public class Animals {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class RabbitAndChicken {
               command line arguments
   */
   public static void main(String[] args) {
-    RabbitAndChicken program = new RabbitAndChicken();
+    Animals program = new Animals();
     program.run();
   }
 

@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class multiplikation {
+public class Multiplikation {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class multiplikation {
               command line arguments
   */
   public static void main(String[] args) {
-    multiplikation program = new multiplikation();
+    Multiplikation program = new Multiplikation();
     program.run();
   }
 

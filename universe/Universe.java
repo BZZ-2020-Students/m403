@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class universe { // NOTE public = jeder hat zugriff darauf
+public class Universe { // NOTE public = jeder hat zugriff darauf
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class universe { // NOTE public = jeder hat zugriff darauf
               command line arguments
   */
   public static void main(String[] args) {
-    universe program = new universe();
+    Universe program = new Universe();
     program.run();
   }
 

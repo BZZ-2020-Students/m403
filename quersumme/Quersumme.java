@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class quersumme {
+public class Quersumme {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class quersumme {
               command line arguments
   */
   public static void main(String[] args) {
-    quersumme program = new quersumme();
+    Quersumme program = new Quersumme();
     program.run();
   }
 

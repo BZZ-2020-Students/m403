@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class anzahlBuchstaben {
+public class AnzahlBuchstaben {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class anzahlBuchstaben {
               command line arguments
   */
   public static void main(String[] args) {
-    anzahlBuchstaben program = new anzahlBuchstaben();
+    AnzahlBuchstaben program = new AnzahlBuchstaben();
     program.run();
   }
 

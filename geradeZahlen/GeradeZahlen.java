@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class geradeZahlen {
+public class GeradeZahlen {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class geradeZahlen {
               command line arguments
   */
   public static void main(String[] args) {
-    geradeZahlen program = new geradeZahlen();
+    GeradeZahlen program = new GeradeZahlen();
     program.run();
   }
 

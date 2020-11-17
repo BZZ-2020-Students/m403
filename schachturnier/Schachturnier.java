@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class schachturnier { // NOTE public = jeder hat zugriff darauf
+public class Schachturnier { // NOTE public = jeder hat zugriff darauf
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class schachturnier { // NOTE public = jeder hat zugriff darauf
               command line arguments
   */
   public static void main(String[] args) {
-    schachturnier program = new schachturnier();
+    Schachturnier program = new Schachturnier();
     program.run();
   }
 

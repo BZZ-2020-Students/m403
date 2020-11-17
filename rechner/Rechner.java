@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class rechner {
+public class Rechner {
   /*
     Starts the execution
 
@@ -16,7 +16,7 @@ public class rechner {
               command line arguments
   */
   public static void main(String[] args) {
-    rechner program = new rechner();
+    Rechner program = new Rechner ();
     program.run();
   }
 

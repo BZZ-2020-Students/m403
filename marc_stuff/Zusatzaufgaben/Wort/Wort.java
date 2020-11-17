@@ -23,6 +23,7 @@ public class Wort {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter a word: ");
     String word = sc.nextLine();
+    sc.close();
     int letterCount = 0;
     for (int i = 0; i <= word.length()-1 ; i++) {
       letterCount++;

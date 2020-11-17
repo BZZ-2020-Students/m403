@@ -1,0 +1,12 @@
+Name: Var
+Vorname: Var
+Geburtsdatum: Const
+Geschlecht: Const
+Adresse: Var
+Telefonnummer: Var
+Mailadresse: Var
+Konfession: Var
+Grösse: Var
+Gewicht: Var
+Haarfarbe: Var
+Augenfarbe: Const (Var)

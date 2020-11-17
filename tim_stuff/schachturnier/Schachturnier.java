@@ -35,7 +35,7 @@ public class Schachturnier { // NOTE public = jeder hat zugriff darauf
     final int MAX_ROUNDS = 5;
 
     Scanner scanner = new Scanner(System.in); // NOTE create new Scanner object called scanner
-    
+
     do {
       System.out.print("Welcher Spieler hat gewonnen? (0/1/2) "); // NOTE tell user what he has to do
       winner = Integer.parseInt(scanner.nextLine()); // NOTE get the input and store it in the variable (as integer)
@@ -63,7 +63,7 @@ public class Schachturnier { // NOTE public = jeder hat zugriff darauf
       timesPlayed++;
     } while (timesPlayed < MAX_ROUNDS);
 
-    // NOTE tell the user who won
+    // NOTE print out the winner
     if (firstPlayerPoints > secondPlayerPoints) {
       System.out.print("Spieler 1 hat gewonnen!");
     } else if (firstPlayerPoints < secondPlayerPoints) {

@@ -1,5 +1,3 @@
-package hoelzchenSpiel;
-
 import java.util.Scanner;
 
 public class HoelzchenSpiel {

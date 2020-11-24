@@ -15,7 +15,7 @@ public class HoelzchenSpiel {
     }
 
     public void run() {
-        while (anzahlHoelzchen > 0) {
+        while (anzahlHoelzchen > 1) {
             int takeHoelzchen = howManyHoelzchen();
 
             while (takeHoelzchen > maxHoelzchen || takeHoelzchen < minHoelzchen) {
@@ -28,7 +28,7 @@ public class HoelzchenSpiel {
             System.out.print("\n\n");
         }
 
-        switchPlayer();
+        //switchPlayer();
         System.out.print("\n\n");
         System.out.println("Spieler " + currentPlayer + " hat verloren!!");
     }

@@ -29,14 +29,13 @@ public class Notenschnitt {
 
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("+-----------------------------+");
+    seperator();
     System.out.println("How many marks do you have?");
-    System.out.println("+-----------------------------+");
-
+    seperator();
     totalMarks = Integer.parseInt(sc.nextLine());
 
     for (int i = amountOfMarks; i < totalMarks; i++) {
-      System.out.println("+---------------------------+");
+      seperator();
       System.out.println("You've already entered " + amountOfMarks + " out of " + totalMarks + " marks!");
       System.out.println("Enter a mark between 1 and 6!");
       double currentMark = sc.nextDouble();
@@ -51,15 +50,23 @@ public class Notenschnitt {
       }
     }
     System.out.println("Your average is: " + total / totalMarks);
-    System.out.println("+----------------+");
+    seperator();
     System.out.println("Your marks are:");
-    System.out.println("+----------------+");
-    System.out.println("");
+    seperator();
     for(int a = 0; a < marks.size(); a++) {
       int marknumber = a+1;
       System.out.println("Mark " + marknumber + ":........" + marks.get(a));
     }
-    System.out.println("");
-    System.out.println("+----------------+");
+    seperator();
+  }
+
+  private void seperator() {
+    System.out.println("\n");
+    System.out.print("+");
+    for(int i = 0; i < 50; i++) {
+      System.out.print("-");
+    }
+    System.out.print("+");
+    System.out.println("\n");
   }
 }

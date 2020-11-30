@@ -41,14 +41,6 @@ public class HoelzchenSpiel {
     }
 
     private void switchPlayer() {
-        switch(currentPlayer) {
-            case 1:
-                currentPlayer = 2;
-                break;
-
-            case 2:
-                currentPlayer = 1;
-                break;
-        }
+        currentPlayer = 3 - currentPlayer;
     }
 }

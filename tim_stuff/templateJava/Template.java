@@ -6,6 +6,7 @@
   @version 0.1
 */
 
+
 // NOTE Programme werden als Klassen bezeichnet
 // NOTE Klassenname und Dateiname müssen gleich sein!
 public class Template { // Template ist der Name der Klasse

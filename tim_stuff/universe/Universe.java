@@ -6,6 +6,7 @@
   @version 0.1
 */
 
+
 import java.util.Scanner;
 
 public class Universe { // NOTE public = jeder hat zugriff darauf

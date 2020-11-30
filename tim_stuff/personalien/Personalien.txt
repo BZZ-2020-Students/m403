@@ -1,6 +1,6 @@
 Name            Variable
 Vorname         Variable
-Geburtsdatum    Konstant
+Geburtsdatum    Konstante
 Geschlecht      Konstante
 Adresse         Variable
 Telefonnummern  Variable

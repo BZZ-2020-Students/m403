@@ -6,6 +6,7 @@
   @version 0.1
 */
 
+
 import java.util.Scanner;
 
 public class Quersumme {

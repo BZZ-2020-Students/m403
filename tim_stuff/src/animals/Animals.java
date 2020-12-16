@@ -5,7 +5,7 @@
   @since 2020-11-10
   @version 0.1
 */
-package bzz.m403.animals;
+package animals;
 
 import java.util.Scanner;
 

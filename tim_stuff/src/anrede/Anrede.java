@@ -1,4 +1,4 @@
-package bzz.m403.anrede;
+package anrede;
 
 import java.util.Scanner;
 

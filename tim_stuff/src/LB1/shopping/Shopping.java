@@ -1,4 +1,4 @@
-package shopping; import java.util.Scanner;
+package LB1.shopping; import java.util.Scanner;
 
 /**
  * Dieses Programm hilft dem Benutzer, sein Budget zu verwalten.

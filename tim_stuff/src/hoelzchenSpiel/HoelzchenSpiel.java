@@ -1,4 +1,4 @@
-package bzz.m403.hoelzchenSpiel;
+package hoelzchenSpiel;
 
 import java.util.Scanner;
 

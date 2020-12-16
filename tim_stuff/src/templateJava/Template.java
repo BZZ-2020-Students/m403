@@ -6,7 +6,7 @@
   @version 0.1
 */
 
-package bzz.m403.templateJava;
+package templateJava;
 
 // NOTE Programme werden als Klassen bezeichnet
 // NOTE Klassenname und Dateiname müssen gleich sein!

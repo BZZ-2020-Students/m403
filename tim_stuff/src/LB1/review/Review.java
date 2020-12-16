@@ -1,4 +1,4 @@
-package review;   import java.util.Scanner;
+package LB1.review;   import java.util.Scanner;
 /**
   * play a game of backgammon
   * @author  Andre Probst (pra)

@@ -20,7 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="956cffdb-85ee-4756-b4a3-c31aa0dd853c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/java-grundlagen-intellij.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/FirstProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstProject/src/first/First.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LB1/review/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LB1/review/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LB1/shopping/Shopping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LB1/shopping/Shopping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animals/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/animals/Animals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anrede/Anrede.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/anrede/Anrede.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geradeZahlen/GeradeZahlen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geradeZahlen/GeradeZahlen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hello_world/Helloworld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hello_world/Helloworld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoelzchenSpiel/HoelzchenSpiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoelzchenSpiel/HoelzchenSpiel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muenzchenSpiel/MuenzchenSpiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/muenzchenSpiel/MuenzchenSpiel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multiplizieren/Multiplikation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiplizieren/Multiplikation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notenSchnitt/NotenSchnitt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notenSchnitt/NotenSchnitt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quersumme/Quersumme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quersumme/Quersumme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rechner/Rechner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rechner/Rechner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schachturnier/Schachturnier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schachturnier/Schachturnier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soccerManager/SoccerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soccerManager/SoccerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateJava/Template.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateJava/Template.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universe/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universe/Universe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wort/AnzahlBuchstaben.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wort/AnzahlBuchstaben.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +148,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Fakultaet" />
@@ -147,6 +182,7 @@
       <workItem from="1608119156921" duration="109000" />
       <workItem from="1608119391507" duration="1683000" />
       <workItem from="1608121793795" duration="10000" />
+      <workItem from="1608122035981" duration="322000" />
     </task>
     <servers />
   </component>

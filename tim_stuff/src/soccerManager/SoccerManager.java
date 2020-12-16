@@ -1,4 +1,4 @@
-package bzz.m403.soccerManager;
+package soccerManager;
 
 import java.util.Scanner;
 

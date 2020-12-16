@@ -1,4 +1,4 @@
-package bzz.m403.muenzchenSpiel;
+package muenzchenSpiel;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package bzz.m403.hello_world;
+package hello_world;
 
 public class Helloworld {
     public static void main(String[] args) {

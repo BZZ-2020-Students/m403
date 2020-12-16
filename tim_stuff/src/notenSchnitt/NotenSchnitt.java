@@ -6,7 +6,7 @@
   @version 0.1
 */
 
-package bzz.m403.notenSchnitt;
+package notenSchnitt;
 
 import java.util.Scanner;
 

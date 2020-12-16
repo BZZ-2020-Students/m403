@@ -6,7 +6,7 @@
   @version 0.1
 */
 
-package bzz.m403.schachturnier;
+package schachturnier;
 
 import java.util.Scanner;
 

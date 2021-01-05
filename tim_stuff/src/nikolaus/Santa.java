@@ -35,7 +35,7 @@ public class Santa {
      * @return the total points
      */
     private double deeds() {
-
+        
         return -1;   // FIXME return the total points
     }
 

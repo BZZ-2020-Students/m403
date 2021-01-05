@@ -35,8 +35,21 @@ public class Santa {
      * @return the total points
      */
     private double deeds() {
-        
-        return -1;   // FIXME return the total points
+        double total = 0;
+        double punkte = -999;
+        while (total >= -20 && punkte != 0) {
+            System.out.printf("Geben Sie die Anzahl Punkte an, 0 um zu beenden: ");
+            punkte = scanner.nextInt();
+            total += punkte;
+            if (punkte > 0) {
+                System.out.println("Eine gute Tat");
+            } else {
+                System.out.println("Eine böse Tat");
+            }
+            System.out.println("Zwischentotal: " + total);
+        }
+        System.out.println("Total: " + total);
+        return total;
     }
 
     /**
@@ -44,6 +57,6 @@ public class Santa {
      * @param points  the total points accumulated
      */
     private void verdict(double points) {
-
+        
     }
 }

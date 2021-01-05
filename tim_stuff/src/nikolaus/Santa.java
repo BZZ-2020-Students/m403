@@ -57,6 +57,14 @@ public class Santa {
      * @param points  the total points accumulated
      */
     private void verdict(double points) {
-        
+        if (points < 0) {
+            System.out.println("Ein unartiges Kind");
+        } else if (points < 9.5) {
+            System.out.println("Ein etwas artiges Kind");
+        } else if (points < 15) {
+            System.out.println("Ein artiges Kind");
+        } else {
+            System.out.println("Ein braves Kind");
+        }
     }
 }

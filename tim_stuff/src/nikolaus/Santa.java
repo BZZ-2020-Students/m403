@@ -39,7 +39,7 @@ public class Santa {
         double punkte = -999;
         while (total >= -20 && punkte != 0) {
             System.out.printf("Geben Sie die Anzahl Punkte an, 0 um zu beenden: ");
-            punkte = scanner.nextInt();
+            punkte = scanner.nextDouble();
             total += punkte;
             if (punkte > 0) {
                 System.out.println("Eine gute Tat");

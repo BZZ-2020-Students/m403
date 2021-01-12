@@ -53,7 +53,7 @@ public class Distanceconverter {
                 }
                 unitFrom = scanner.nextInt();
                 if (unitFrom < 1 || unitFrom > 5) {
-                    unitFrom = -1;
+                    unitFrom = -3;
                     System.out.println("Unbekannte Einheit. Bitte 1-5 eingeben.");
                 }
             }

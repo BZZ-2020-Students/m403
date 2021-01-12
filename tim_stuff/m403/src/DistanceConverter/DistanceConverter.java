@@ -85,45 +85,14 @@ public class DistanceConverter {
 
         System.out.format("%f ", length);
         double result = length;
-        if (unitFrom == 1) {
-            System.out.print ("Meter");
-        }
-        else if (unitFrom == 2) {
-            System.out.print ("Meilen");
-            result = length * 1609.34;
-        }
-        else if (unitFrom == 3) {
-            System.out.print ("Seemeilen");
-            result = length * 1852.0;
-        }
-        else if (unitFrom == 4) {
-            System.out.print ("Yards");
-            result = length * 0.9144;
-        }
-        else if (unitFrom == 5) {
-            System.out.print ("Inches");
-            result = length * 0.0254;
-        }
+        double[] multiplicator = {1,1609.34,1852.0,0.9144,0.0254};
+        String[] distanceType = {"Meter","Meilen","Seemeilen","Yards","Inches"};
+        unitFrom--;
+        System.out.print (distanceType[unitFrom]);
+        result = length * multiplicator[unitFrom];
 
         System.out.print(" entspricht ");
-        if (unitTo == 1) {
-            System.out.format("%s %.3f", "Meter", result);
-        }
-        if (unitTo == 2) {
-            result = result / 1609.34;
-            System.out.format("%s %.3f", "Meilen", result);
-        }
-        if (unitTo == 3) {
-            result = result / 1852.0;
-            System.out.format("%s %.3f", "Seemeilen", result);
-        }
-        if (unitTo == 4) {
-            result = result / 0.9144;
-            System.out.format("%s %.3f", "Yards", result);
-        }
-        if (unitTo == 5) {
-            result = result / 0.0254;
-            System.out.format("%s %.3f", "Inches", result);
-        }
+        unitTo--;
+        System.out.format("%s %.3f", distanceType[unitTo], result);
     }
 }

@@ -43,12 +43,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -74,7 +76,7 @@
       <updated>1607413324933</updated>
       <workItem from="1607413326797" duration="381000" />
       <workItem from="1607414267652" duration="75000" />
-      <workItem from="1608015131119" duration="32000" />
+      <workItem from="1609854843437" duration="36000" />
     </task>
     <servers />
   </component>
@@ -95,39 +97,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1607413345184">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1607413345184" />
-    <state x="383" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607413533372">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="383" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1607413533372" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1608015161120">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608015161120" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1607414342582">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607414342582" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1607414342582">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607414342582" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1607414342582">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607414342582" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1607414342582">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607414342582" />
-    <state x="360" y="37" key="new project wizard" timestamp="1608015162830">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="360" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1608015162830" />
   </component>
 </project>

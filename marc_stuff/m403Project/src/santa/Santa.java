@@ -56,7 +56,7 @@ public class Santa {
                 System.out.println("A bad deed!");
         }
         total = roundPoints(total);
-        return total; // FIXME return the total points
+        return total;
     }
 
     private double roundPoints(double input) {

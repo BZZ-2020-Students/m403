@@ -1,7 +1,9 @@
+package santa;
+
 import java.util.Scanner;
 
 /**
- * Santa's naughty and nice list
+ * santa.Santa's naughty and nice list
  *
  * @author TODO
  */

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Santa's naughty and nice list
- * @author TODO
+ * @author Zwazel
  */
 public class Santa {
     private static Scanner scanner;

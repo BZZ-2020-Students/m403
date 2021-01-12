@@ -10,6 +10,10 @@ import java.util.Scanner;
  */
 public class DistanceConverter {
 
+    double[] multiplicator = {1,1609.34,1852.0,0.9144,0.0254};
+    String[] distanceType = {"Meter","Meilen","Seemeilen","Yards","Inches"};
+    int[] units = new int[2];
+
     // declare attributes
     static Scanner scanner;
 
@@ -35,8 +39,39 @@ public class DistanceConverter {
      * runs the converter
      */
     private void run() {
-        int unitFrom = -1;
-        int unitTo = -1;
+        double length = 0;
+
+        System.out.format("%f ", length);
+        double result = length;
+        System.out.print (distanceType[units[0]]);
+        result = length * multiplicator[units[0]];
+
+        System.out.print(" entspricht ");
+        System.out.format("%s %.3f", distanceType[units[1]], result);
+    }
+
+    private int getUnits(String vonOrNach) {
+        System.out.println("Zulässige Einheiten für die Umrechnung:");
+        System.out.println("1=" + distanceType[0] + ", 2=" + distanceType[1] + ", 3=" + distanceType[2] + ", 4=" + distanceType[3] + ", 5=" + distanceType[4]);
+        int unit = -1;
+        while (unit == -1) {
+            System.out.print("Einheit " + vonOrNach + " (1-5) >");
+            while (!scanner.hasNextInt ()) {
+                System.out.println("Unbekannte Einheit. Bitte 1-5 eingeben.");
+                scanner.nextLine();
+                System.out.print("Einheit " + vonOrNach + " (1-5) >");
+            }
+            unit = scanner.nextInt ();
+            if (unit < 1 || unit > 5) {
+                unit = -1;
+                System.out.println ("Unbekannte Einheit. Bitte 1-5 eingeben.");
+            }
+        }
+
+        return unit-1;
+    }
+
+    private double getLength() {
         double length = 0;
 
         while (length <= 0) {
@@ -53,46 +88,6 @@ public class DistanceConverter {
             }
         }
 
-        System.out.println("Zulässige Einheiten für die Umrechnung:");
-        System.out.println("1=Meter, 2=Meilen, 3=Seemeilen, 4=Yard, 5=Inches");
-        while (unitFrom == -1) {
-            System.out.print("Einheit von (1-5) >");
-            while (!scanner.hasNextInt ()) {
-                System.out.println("Unbekannte Einheit. Bitte 1-5 eingeben.");
-                scanner.nextLine();
-                System.out.print("Einheit von (1-5) >");
-            }
-            unitFrom = scanner.nextInt ();
-            if (unitFrom < 1 || unitFrom > 5) {
-                unitFrom = -1;
-                System.out.println ("Unbekannte Einheit. Bitte 1-5 eingeben.");
-            }
-        }
-
-        while (unitTo == -1) {
-            System.out.print("Einheit nach (1-5) >");
-            while (!scanner.hasNextInt ()) {
-                System.out.println("Unbekannte Einheit. Bitte 1-5 eingeben.");
-                scanner.nextLine();
-                System.out.print("Einheit nach (1-5) >");
-            }
-            unitTo = scanner.nextInt ();
-            if (unitTo < 1 || unitTo > 5) {
-                unitTo = -1;
-                System.out.println ("Unbekannte Einheit. Bitte 1-5 eingeben.");
-            }
-        }
-
-        System.out.format("%f ", length);
-        double result = length;
-        double[] multiplicator = {1,1609.34,1852.0,0.9144,0.0254};
-        String[] distanceType = {"Meter","Meilen","Seemeilen","Yards","Inches"};
-        unitFrom--;
-        System.out.print (distanceType[unitFrom]);
-        result = length * multiplicator[unitFrom];
-
-        System.out.print(" entspricht ");
-        unitTo--;
-        System.out.format("%s %.3f", distanceType[unitTo], result);
+        return length;
     }
 }

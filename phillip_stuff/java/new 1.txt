@@ -1,0 +1,12 @@
+Name = Variable
+Vorname = Variable
+Geburtsdatum = Konstante
+Geschlecht = Konstante
+Adresse = Variable
+Telefonnummer = Variable
+Mailadresse = Variable
+Konfession = Variable
+Grösse = Variable
+Gewicht = Variable
+Haarfarbe = Variable
+Augenfarbe = Variable

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Santa's naughty and nice list
- * @author TODO
+ * @author Zwazel
  */
 public class Santa {
     private static Scanner scanner;
@@ -25,6 +25,11 @@ public class Santa {
         System.out.println("Herzliche Willkommen, lieber Nikolaus");
 
         double total = program.deeds();
+        total += 0.25;
+        total *= 2;
+        int gerundet = (int)total;
+        total = (double)gerundet/2;
+
         program.verdict(total);
 
         scanner.close();
@@ -39,6 +44,10 @@ public class Santa {
         double punkte = -999;
         while (total >= -20 && punkte != 0) {
             System.out.printf("Geben Sie die Anzahl Punkte an, 0 um zu beenden: ");
+            while (!scanner.hasNextDouble()) {
+                System.out.println("Das ist keine Zahl. Punkte >");
+                scanner.next();
+            }
             punkte = scanner.nextDouble();
             total += punkte;
             if (punkte > 0) {
@@ -57,6 +66,8 @@ public class Santa {
      * @param points  the total points accumulated
      */
     private void verdict(double points) {
+        System.out.println("Gerundete Punkte: " + points);
+
         if (points < 0) {
             System.out.println("Ein unartiges Kind");
         } else if (points < 9.5) {

@@ -2,11 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../:\Github\m403\tim_stuff\FirstProject\.idea/dataSources/
+/../../../../../../:\Github\m403\tim_stuff\m403\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-
-*.class
-*/.idea/
-tim_stuff/m403/out/production/m403/personalien/Personalien.txt

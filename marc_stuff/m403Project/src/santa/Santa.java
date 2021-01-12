@@ -50,11 +50,10 @@ public class Santa {
             }
             points = scanner.nextDouble();
             total += points;
-            if (points >= 0) {
+            if (points >= 0)
                 System.out.println("A good deed!");
-            } else {
+            else
                 System.out.println("A bad deed!");
-            }
         }
         total = roundPoints(total);
         return total; // FIXME return the total points

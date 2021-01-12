@@ -39,12 +39,13 @@ public class DistanceConverter {
      * runs the converter
      */
     private void run() {
-        double length = 0;
+        double length = getLength();
+        units[0] = getUnits("von");
+        units[1] = getUnits("nach");
 
         System.out.format("%f ", length);
-        double result = length;
         System.out.print (distanceType[units[0]]);
-        result = length * multiplicator[units[0]];
+        double result = length * multiplicator[units[0]];
 
         System.out.print(" entspricht ");
         System.out.format("%s %.3f", distanceType[units[1]], result);

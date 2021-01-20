@@ -89,16 +89,5 @@ public class WordFinderClient {
         for (Integer i : array) {
             foundPos.add(i);
         }
-
-//        boolean[] threadsDone = {false, false};
-//        while (!threadsDone[0] && !threadsDone[1]) {
-//            for (int i = 0; i < 2; i++) {
-//                if (finderThreads[i].isDone() && !threadsDone[i]) {
-//                    for (Integer j : finderThreads[i].getWordPositions())
-//                        foundPos.add(j);
-//                    threadsDone[i] = true;
-//                }
-//            }
-//        }
     }
 }

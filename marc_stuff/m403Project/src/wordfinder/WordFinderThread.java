@@ -2,50 +2,57 @@ package wordfinder;
 
 import java.util.ArrayList;
 
-public class WordFinderThread implements Runnable {
-    private Thread wordFinder;
+public class WordFinderThread extends Thread {
+    private boolean showDebug;
     private final String threadName;
     private String word;
     private int startPos;
+    private int endPos;
     private ArrayList<String> wordList;
     private ArrayList<Integer> foundPositions = new ArrayList<>();
-    private WordFinderClient client;
 
-    public WordFinderThread(String threadName, int startPos, ArrayList<String> wordList, String word, WordFinderClient client) {
+    /**
+     * @param threadName is the name of the thread
+     * @param startPos the position the stread starts searching for this word
+     * @param wordList the list of all words
+     * @param word the word we are searching for
+     */
+    public WordFinderThread(String threadName, int startPos, int endPos, ArrayList<String> wordList, String word, boolean showDebug) {
+        this.showDebug = showDebug;
         this.threadName = threadName;
         this.startPos = startPos;
+        this.endPos = endPos;
         this.wordList = wordList;
         this.word = word;
-        this.client = client;
     }
 
+    /**
+     * This method gets run as soon as we create the thread
+     */
     @Override
     public void run() {
-        System.out.println("Thread running " + threadName);
+        if (showDebug)
+            System.out.println("DEBUG INFORMATION > Thread running : '" + threadName + "', startPos : " + startPos + ", endPos : " + endPos);
         findWordPositions();
-        System.out.println("before interrupt");
-        wordFinder.interrupt();
     }
 
-    public Thread getThread() {
-        return wordFinder;
-    }
-
-    public void start() {
-        System.out.println("THREAD " + threadName + " STARTED");
-        if (wordFinder == null) {
-            wordFinder = new Thread(this, threadName);
-            wordFinder.start();
-        }
-    }
-
+    /**
+     * finds all the occurrences of the word in the list of all words
+     */
     public void findWordPositions() {
-        for (int i = 0; i < wordList.size(); i++) {
+        for (int i = startPos; i < endPos; i++) {
             String s = wordList.get(i);
             if (s.equalsIgnoreCase(word))
-                foundPositions.add(i + startPos);
+                foundPositions.add(i);
         }
-        client.getPositions(foundPositions);
+        if (showDebug)
+            System.out.println("DEBUG INFORMATION > " + threadName + " has found all occurrences of the word!");
+    }
 
+    /**
+     * @return returns all found occurrences
+     */
+    public ArrayList<Integer> getFoundPos() {
+        return foundPositions;
     }
 }

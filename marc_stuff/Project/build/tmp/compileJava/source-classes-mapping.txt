@@ -1,0 +1,38 @@
+additionaltasks/Multiplizieren/Multiplizieren.java
+ Multiplizieren
+average/Notenschnitt.java
+ Notenschnitt
+chesstournament/Schachturnier.java
+ Schachturnier
+matchstickgame/MatchStickGame.java
+ MatchStickGame
+universe/Universe.java
+ Universe
+additionaltasks/GeradeZahlen/GeradeZahlen.java
+ GeradeZahlen
+additionaltasks/Rechner/Rechner.java
+ Rechner
+anrede/Anrede.java
+ Anrede
+coingame/Muenzenspiel.java
+ Muenzenspiel
+wordfinder/WordFinderClient.java
+ wordfinder.WordFinderClient
+lengthconvertor/DistanceConverter.java
+ lengthconvertor.DistanceConverter
+bunnychicken/Animals.java
+ Animals
+additionaltasks/Wort/Wort.java
+ Wort
+santa/Santa.java
+ santa.Santa
+satisfyingtext/Satisfying.java
+ Satisfying
+wordfinder/WordFinderThread.java
+ wordfinder.WordFinderThread
+additionaltasks/Quersumme/Quersumme.java
+ Quersumme
+soccermanager/Soccer.java
+ Soccer
+wordfinder/WordFinderGUI.java
+ wordfinder.WordFinderGUI

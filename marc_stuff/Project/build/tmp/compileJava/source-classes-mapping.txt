@@ -34,7 +34,7 @@ wordfinder/WordFinderThread.java
  wordfinder.WordFinderThread
 wordfinder/StopWatch.java
  wordfinder.StopWatch
-wordfinder/WordFinderGUI.java
- wordfinder.WordFinderGUI
 wordfinder/WordFinderClient.java
  wordfinder.WordFinderClient
+wordfinder/WordFinderGUI.java
+ wordfinder.WordFinderGUI

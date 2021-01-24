@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * @author Marc-Andri Fuchs
+ * @version 1.0
+ */
+
 public class WordFinderClient {
     private int amountThreads;
     private boolean showDebug;
@@ -16,6 +21,7 @@ public class WordFinderClient {
     private ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
     private String word = "lorem"; // the word we are searching for
     private String filePath;
+    private StopWatch sw = new StopWatch();
 
     public static void main(String[] args) {
         new WordFinderClient().run();
@@ -26,6 +32,7 @@ public class WordFinderClient {
      */
     private void run() {
         getUserInput();
+        sw.start();
         getFileInput();
         initThreads();
         //wait for all threads to finish processing
@@ -36,14 +43,18 @@ public class WordFinderClient {
             System.err.println("There was an error with joining all threads!");
             e.printStackTrace();
         }
-        if (showDebug)
+        sw.stop();
+        if (showDebug) {
             System.out.println("DEBUG INFORMATION > All threads have joined!");
+        }
 
         getPositions();
-        if (showDebug)
+        if (showDebug) {
             System.out.println("DEBUG INFORMATION > List of all found positions : " + foundPositions);
+        }
 
         new WordFinderGUI(foundPositions);
+        System.out.println("The program found the words in : " + sw);
     }
 
     /**

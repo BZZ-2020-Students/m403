@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * @author Marc-Andri Fuchs
+ * @version 1.0
+ */
+
 public class WordFinderGUI extends JFrame {
     ArrayList<Integer> positions;
 

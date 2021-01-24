@@ -16,8 +16,8 @@ anrede/Anrede.java
  Anrede
 coingame/Muenzenspiel.java
  Muenzenspiel
-wordfinder/WordFinderGUI.java
- wordfinder.WordFinderGUI
+additionaltasks/Quersumme/Quersumme.java
+ Quersumme
 lengthconvertor/DistanceConverter.java
  lengthconvertor.DistanceConverter
 bunnychicken/Animals.java
@@ -28,11 +28,13 @@ santa/Santa.java
  santa.Santa
 satisfyingtext/Satisfying.java
  Satisfying
-wordfinder/WordFinderThread.java
- wordfinder.WordFinderThread
-additionaltasks/Quersumme/Quersumme.java
- Quersumme
 soccermanager/Soccer.java
  Soccer
+wordfinder/WordFinderThread.java
+ wordfinder.WordFinderThread
+wordfinder/StopWatch.java
+ wordfinder.StopWatch
+wordfinder/WordFinderGUI.java
+ wordfinder.WordFinderGUI
 wordfinder/WordFinderClient.java
  wordfinder.WordFinderClient

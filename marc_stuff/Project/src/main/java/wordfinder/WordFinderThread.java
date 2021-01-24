@@ -2,6 +2,11 @@ package wordfinder;
 
 import java.util.ArrayList;
 
+/**
+ * @author Marc-Andri Fuchs
+ * @version 1.0
+ */
+
 public class WordFinderThread extends Thread {
     private final boolean showDebug;
     private final String threadName;

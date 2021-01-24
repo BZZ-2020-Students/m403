@@ -28,7 +28,7 @@ public class WordFinderGUI extends JFrame {
         StringBuilder foundPositions = new StringBuilder();
         int counter = 0;
         for (int i : positions) {
-            foundPositions.append(i + ", ");
+            foundPositions.append(i).append(", ");
             counter++;
             if (counter >= 10) {
                 foundPositions.append("\n");

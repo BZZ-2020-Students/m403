@@ -3,13 +3,13 @@ package wordfinder;
 import java.util.ArrayList;
 
 public class WordFinderThread extends Thread {
-    private boolean showDebug;
+    private final boolean showDebug;
     private final String threadName;
-    private String word;
-    private int startPos;
-    private int endPos;
-    private ArrayList<String> wordList;
-    private ArrayList<Integer> foundPositions = new ArrayList<>();
+    private final String word;
+    private final int startPos;
+    private final int endPos;
+    private final ArrayList<String> wordList;
+    private final ArrayList<Integer> foundPositions = new ArrayList<>();
 
     /**
      * @param threadName is the name of the thread

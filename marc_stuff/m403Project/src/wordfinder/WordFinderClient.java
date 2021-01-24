@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WordFinderClient {
@@ -15,7 +16,7 @@ public class WordFinderClient {
     ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
     String word = "lorem"; // the word we are searching for
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         new WordFinderClient().run();
     }
 
@@ -24,13 +25,18 @@ public class WordFinderClient {
      *
      * @throws InterruptedException because we are waiting for the threads to join
      */
-    private void run() throws InterruptedException {
+    private void run() {
         getUserInput();
         getFileInput();
         initThreads();
         //wait for all threads to finish processing
-        for (WordFinderThread thread : finderThreads)
-            thread.join();
+        try {
+            for (WordFinderThread thread : finderThreads)
+                thread.join();
+        } catch (InterruptedException e) {
+            System.err.println("There was an error with joining all threads!");
+            e.printStackTrace();
+        }
         if (showDebug)
             System.out.println("DEBUG INFORMATION > All threads have joined!");
 
@@ -38,7 +44,7 @@ public class WordFinderClient {
         if (showDebug)
             System.out.println("DEBUG INFORMATION > List of all found positions : " + foundPositions);
 
-        WordFinderGUI gui = new WordFinderGUI(foundPositions);
+        new WordFinderGUI(foundPositions);
     }
 
     /**
@@ -57,9 +63,7 @@ public class WordFinderClient {
             Scanner sc = new Scanner(inputText);
             while (sc.hasNextLine()) {
                 String[] ss = sc.nextLine().replaceAll(",", " ").split("\\s");
-                for (String s : ss)
-                    wordList.add(s);
-
+                wordList.addAll(Arrays.asList(ss));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -87,6 +91,9 @@ public class WordFinderClient {
             this.foundPositions.addAll(t.getFoundPos());
     }
 
+    /**
+     * Gets the user input about if he wants to see debug info, the amount of threads, the word we will search for
+     */
     private void getUserInput() {
         Scanner sc = new Scanner(System.in);
 
@@ -105,9 +112,6 @@ public class WordFinderClient {
                 break;
         }
 
-        /**
-         * Gets the user input about if he wants to see debug info, the amount of threads, the word we will search for
-         */
         System.out.print("How many threads do you want to run ..................> ");
         while (!sc.hasNextInt()) {
             System.out.print("This is not a valid integer, please try again >");
@@ -115,16 +119,12 @@ public class WordFinderClient {
         this.amountThreads = sc.nextInt();
         sc.nextLine();
 
-        System.out.print("What's the word you want the program to find > ");
+        System.out.print("What's the word you want the program to find .........> ");
         this.word = sc.nextLine();
 
         System.out.println("Create a file called 'input.txt' in your working directory");
         System.out.println("Add the text you want in this file");
         System.out.println("If you have prepared the text you want to search press a button to continue!");
-        try {
-            System.in.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        sc.nextLine();
     }
 }

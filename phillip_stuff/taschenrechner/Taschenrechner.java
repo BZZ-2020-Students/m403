@@ -74,26 +74,26 @@ public class Taschenrechner {
         System.out.println("Möchten Sie mit einem zwischengeschpeichertem Resultat rechnen?[Ja = 1,Nein = 0]");
         int weiterrechnen = scanner.nextInt();
 
-        System.out.println("Geben Sie ihre erste Ziffern ein: ");
+        System.out.println("Geben Sie ihre erste Zahl ein: ");
         double zahleins = scanner.nextDouble();
 
 
-        return weiterrechnen(weiterrechnen, zahleins, '+');
+        return berechnen(weiterrechnen, zahleins, '+');
     }
 
     /**
      * Fragt den nutzer nach einer Zahl ab und subtrahiert diese
      *
-     * @return Resultat der Subtraktion
+     * @return Resultat der Subtraktion<
      */
     private double minus() {
         System.out.println("Möchten Sie mit einem zwischengeschpeichertem Resultat rechnen?[Ja = 1,Nein = 0]");
         int weiterrechnen = scanner.nextInt();
 
-        System.out.println("Geben Sie ihre erste Ziffern ein: ");
+        System.out.println("Geben Sie ihre erste Zahl ein: ");
         double zahleins = scanner.nextDouble();
 
-        return weiterrechnen(weiterrechnen, zahleins, '-');
+        return berechnen(weiterrechnen, zahleins, '-');
     }
 
     /**
@@ -105,10 +105,10 @@ public class Taschenrechner {
         System.out.println("Möchten Sie mit einem zwischengeschpeichertem Resultat rechnen?[Ja = 1,Nein = 0]");
         int weiterrechnen = scanner.nextInt();
 
-        System.out.println("Geben Sie ihre erste Ziffern ein: ");
+        System.out.println("Geben Sie ihre erste Zahl ein: ");
         double zahleins = scanner.nextDouble();
 
-        return weiterrechnen(weiterrechnen, zahleins, '*');
+        return berechnen(weiterrechnen, zahleins, '*');
     }
 
     /**
@@ -120,10 +120,10 @@ public class Taschenrechner {
         System.out.println("Möchten Sie mit einem zwischengeschpeichertem Resultat rechnen?[Ja = 1,Nein = 0]");
         int weiterrechnen = scanner.nextInt();
 
-        System.out.println("Geben Sie ihre erste Ziffern ein: ");
+        System.out.println("Geben Sie ihre erste Zahl ein: ");
         double zahleins = scanner.nextDouble();
 
-        return weiterrechnen(weiterrechnen, zahleins, '/');
+        return berechnen(weiterrechnen, zahleins, '/');
     }
 
     /**
@@ -132,7 +132,7 @@ public class Taschenrechner {
      * @param operator      der Oparator, welcher verwendet werden soll
      * @return Das Resultat der Rechnung
      */
-    private double weiterrechnen(double weiterrechnen, double zahleins, char operator) {
+    private double berechnen(double weiterrechnen, double zahleins, char operator) {
 
         if (weiterrechnen == 1) {
             System.out.println("Diese Zahlen sind im Zwischenspeicher gespeichert: ");

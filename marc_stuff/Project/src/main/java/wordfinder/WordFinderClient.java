@@ -62,17 +62,10 @@ public class WordFinderClient {
      */
     private void getFileInput() {
         File inputText = new File(filePath);
-        if (!inputText.exists()) {
-            try {
-                inputText.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
         try {
             Scanner sc = new Scanner(inputText);
             while (sc.hasNextLine()) {
-                String[] ss = sc.nextLine().replaceAll(",", " ").split("\\s");
+                String[] ss = sc.nextLine().replaceAll(", \\.", " ").split("\\s");
                 wordList.addAll(Arrays.asList(ss));
             }
         } catch (FileNotFoundException e) {

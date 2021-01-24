@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 
 public class WordFinderGUI extends JFrame {
-    ArrayList<Integer> positions;
+    private final ArrayList<Integer> positions;
 
     /**
      * Constructor initializes the variables
@@ -36,7 +36,7 @@ public class WordFinderGUI extends JFrame {
             foundPositions.append(i).append(", ");
             counter++;
             if (counter >= 10) {
-                foundPositions.append("\n");
+                foundPositions.append(System.lineSeparator());
                 counter = 0;
             }
         }

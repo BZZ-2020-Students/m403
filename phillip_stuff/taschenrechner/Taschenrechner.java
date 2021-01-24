@@ -106,36 +106,20 @@ public class Taschenrechner {
             System.out.println("Welches zwischengeschpeicherte Resultat möchten Sie benutzen? ");
             int j = scanner.nextInt();
             switch (operator) {
-                case '*':
-                    resultat = zwischenspeicher.get(j - 1) * zahleins;
-                    break;
-                case '/':
-                    resultat = zwischenspeicher.get(j - 1) / zahleins;
-                    break;
-                case '-':
-                    resultat = zwischenspeicher.get(j - 1) - zahleins;
-                    break;
-                case '+':
-                    resultat = zwischenspeicher.get(j - 1) + zahleins;
-                    break;
+                case '*' -> resultat = zwischenspeicher.get(j - 1) * zahleins;
+                case '/' -> resultat = zwischenspeicher.get(j - 1) / zahleins;
+                case '-' -> resultat = zwischenspeicher.get(j - 1) - zahleins;
+                case '+' -> resultat = zwischenspeicher.get(j - 1) + zahleins;
             }
 
         } else {
             System.out.println("Geben Sie ihre zweite Zahl ein: ");
             double zahlzwei = scanner.nextDouble();
             switch (operator) {
-                case '*':
-                    resultat = zahlzwei * zahleins;
-                    break;
-                case '/':
-                    resultat = zahlzwei / zahleins;
-                    break;
-                case '-':
-                    resultat = zahlzwei - zahleins;
-                    break;
-                case '+':
-                    resultat = zahlzwei + zahleins;
-                    break;
+                case '*' -> resultat = zahlzwei * zahleins;
+                case '/' -> resultat = zahlzwei / zahleins;
+                case '-' -> resultat = zahlzwei - zahleins;
+                case '+' -> resultat = zahlzwei + zahleins;
             }
 
         }

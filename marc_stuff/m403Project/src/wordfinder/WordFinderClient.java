@@ -22,8 +22,6 @@ public class WordFinderClient {
 
     /**
      * starts all the methods
-     *
-     * @throws InterruptedException because we are waiting for the threads to join
      */
     private void run() {
         getUserInput();

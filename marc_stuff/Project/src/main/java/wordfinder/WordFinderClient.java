@@ -11,10 +11,11 @@ public class WordFinderClient {
     private int amountThreads;
     private boolean showDebug;
 
-    ArrayList<WordFinderThread> finderThreads = new ArrayList<>(); // ArrayList of all threads
-    ArrayList<String> wordList = new ArrayList<>(); // ArrayList of all words in the text
-    ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
-    String word = "lorem"; // the word we are searching for
+    private ArrayList<WordFinderThread> finderThreads = new ArrayList<>(); // ArrayList of all threads
+    private ArrayList<String> wordList = new ArrayList<>(); // ArrayList of all words in the text
+    private ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
+    private String word = "lorem"; // the word we are searching for
+    private String filePath;
 
     public static void main(String[] args) {
         new WordFinderClient().run();
@@ -49,7 +50,7 @@ public class WordFinderClient {
      * Reads through the file with the text and adds them to wordList
      */
     private void getFileInput() {
-        File inputText = new File("input.txt");
+        File inputText = new File(filePath);
         if (!inputText.exists()) {
             try {
                 inputText.createNewFile();
@@ -120,9 +121,12 @@ public class WordFinderClient {
         System.out.print("What's the word you want the program to find .........> ");
         this.word = sc.nextLine();
 
-        System.out.println("Create a file called 'input.txt' in your working directory");
-        System.out.println("Add the text you want in this file");
+        System.out.println("Enter the path to your text file, you want to use ..>");
+        this.filePath = sc.nextLine();
+
         System.out.println("If you have prepared the text you want to search press a button to continue!");
         sc.nextLine();
+
+        sc.close();
     }
 }

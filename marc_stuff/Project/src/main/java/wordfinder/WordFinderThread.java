@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 
 public class WordFinderThread extends Thread {
-    private final boolean showDebug;
     private final String threadName;
+    private final boolean showDebug;
     private final String word;
     private final int startPos;
     private final int endPos;
@@ -23,12 +23,12 @@ public class WordFinderThread extends Thread {
      * @param word the word we are searching for
      */
     public WordFinderThread(String threadName, int startPos, int endPos, ArrayList<String> wordList, String word, boolean showDebug) {
-        this.showDebug = showDebug;
         this.threadName = threadName;
         this.startPos = startPos;
         this.endPos = endPos;
         this.wordList = wordList;
         this.word = word;
+        this.showDebug = showDebug;
     }
 
     /**
@@ -36,8 +36,7 @@ public class WordFinderThread extends Thread {
      */
     @Override
     public void run() {
-        if (showDebug)
-            System.out.println("DEBUG INFORMATION > Thread running : '" + threadName + "', startPos : " + startPos + ", endPos : " + endPos);
+        displayDebugInformation("DEBUG INFORMATION > Thread running : '" + threadName + "', startPos : " + startPos + ", endPos : " + endPos);
         findWordPositions();
     }
 
@@ -50,8 +49,16 @@ public class WordFinderThread extends Thread {
             if (s.equalsIgnoreCase(word))
                 foundPositions.add(i);
         }
+        displayDebugInformation("DEBUG INFORMATION > " + threadName + " has found all occurrences of the word!");
+    }
+
+    /**
+     * Shows the user debug information if he wants to see it
+     * @param debugInput The text to show as Debug info
+     */
+    private void displayDebugInformation(String debugInput) {
         if (showDebug)
-            System.out.println("DEBUG INFORMATION > " + threadName + " has found all occurrences of the word!");
+            System.out.println("DEBUG INFORMATION > " + debugInput);
     }
 
     /**

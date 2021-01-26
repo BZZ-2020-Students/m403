@@ -47,6 +47,7 @@ public class WordFinderGUI extends JFrame {
         textArea.setEditable(false);
         p.add(textArea);
         add(p, BorderLayout.NORTH);
+        setResizable(false);
         setVisible(true);
     }
 }

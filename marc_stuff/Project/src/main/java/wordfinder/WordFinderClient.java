@@ -10,18 +10,20 @@ import java.util.Scanner;
 /**
  * @author Marc-Andri Fuchs
  * @version 1.0
+ * 
+ * Takes a file as an input of words and searches the specifies word with multiple threads
  */
 
 public class WordFinderClient {
     private int amountThreads;
     private boolean showDebug;
 
-    private ArrayList<WordFinderThread> finderThreads = new ArrayList<>(); // ArrayList of all threads
-    private ArrayList<String> wordList = new ArrayList<>(); // ArrayList of all words in the text
-    private ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
+    private final ArrayList<WordFinderThread> finderThreads = new ArrayList<>(); // ArrayList of all threads
+    private final ArrayList<String> wordList = new ArrayList<>(); // ArrayList of all words in the text
+    private final ArrayList<Integer> foundPositions = new ArrayList<>(); // ArrayList of all found occurrences of the word
     private String word = "lorem"; // the word we are searching for
     private String filePath;
-    private StopWatch sw = new StopWatch();
+    private final StopWatch sw = new StopWatch();
 
     public static void main(String[] args) {
         new WordFinderClient().run();
@@ -34,6 +36,14 @@ public class WordFinderClient {
         getUserInput();
         sw.start();
         getFileInput();
+        if (amountThreads > wordList.size()) {
+            try {
+                throw new Exception("The amount of threads is bigger than the amount of words in the File!");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
+            }
+        }
         initThreads();
         //wait for all threads to finish processing
         try {
@@ -44,14 +54,10 @@ public class WordFinderClient {
             e.printStackTrace();
         }
         sw.stop();
-        if (showDebug) {
-            System.out.println("DEBUG INFORMATION > All threads have joined!");
-        }
+        displayDebugInformation("All threads have joined!");
 
         getPositions();
-        if (showDebug) {
-            System.out.println("DEBUG INFORMATION > List of all found positions : " + foundPositions);
-        }
+        displayDebugInformation("List of all found positions : " + foundPositions);
 
         new WordFinderGUI(foundPositions);
         System.out.println("The program found the words in : " + sw);
@@ -65,7 +71,7 @@ public class WordFinderClient {
         try {
             Scanner sc = new Scanner(inputText);
             while (sc.hasNextLine()) {
-                String[] ss = sc.nextLine().replaceAll(", \\.", " ").split("\\s");
+                String[] ss = sc.nextLine().replaceAll(",", "").replaceAll("\\.", "").split("\\s");
                 wordList.addAll(Arrays.asList(ss));
             }
         } catch (FileNotFoundException e) {
@@ -82,8 +88,7 @@ public class WordFinderClient {
             finderThreads.add(new WordFinderThread("Thread" + i, part * i, part * (i + 1), wordList, word, showDebug));
             finderThreads.get(i).start();
         }
-        if (showDebug)
-            System.out.println("DEBUG INFORMATION > All threads have been initialized!");
+        displayDebugInformation("All threads have been initialized!");
     }
 
     /**
@@ -99,38 +104,55 @@ public class WordFinderClient {
      */
     private void getUserInput() {
         Scanner sc = new Scanner(System.in);
+        int debugInput;
+        do {
+            System.out.print("Do you want to see debug information [0 = no, 1 = yes]> ");
+            while (!sc.hasNextInt()) {
+                System.out.print("This is not a valid answer, try again ............... > ");
+                sc.next();
+            }
+            debugInput = sc.nextInt();
+        } while (debugInput < 0 || debugInput > 1);
 
-        System.out.print("Do you want to see debug information [0 = no, 1 = yes]> ");
-        while (!sc.hasNextInt()) {
-            System.out.print("This is not a valid answer, try again ............... > ");
-            sc.next();
-        }
-        int debugInput = sc.nextInt();
         switch (debugInput) {
-            case 0:
-                this.showDebug = false;
-                break;
-            case 1:
-                this.showDebug = true;
-                break;
+            case 0 -> this.showDebug = false;
+            case 1 -> this.showDebug = true;
         }
 
-        System.out.print("How many threads do you want to run ..................> ");
-        while (!sc.hasNextInt()) {
-            System.out.print("This is not a valid integer, please try again >");
-        }
-        this.amountThreads = sc.nextInt();
-        sc.nextLine();
+        do {
+            System.out.println("You shouldn't use more threads than there are words in the file!");
+            System.out.print("How many threads do you want to run ..................> ");
+            while (!sc.hasNextInt()) {
+                System.out.print("This is not a valid integer, please try again >");
+            }
+            this.amountThreads = sc.nextInt();
+            sc.nextLine();
+        } while (amountThreads < 1);
 
         System.out.print("What's the word you want the program to find .........> ");
         this.word = sc.nextLine();
 
-        System.out.println("Enter the path to your text file, you want to use ..>");
-        this.filePath = sc.nextLine();
-
-        System.out.println("If you have prepared the text you want to search press a button to continue!");
-        sc.nextLine();
-
+        boolean exists;
+        do {
+            System.out.print("Enter the path to your text file, you want to use ..> ");
+            this.filePath = sc.nextLine();
+            File check = new File(filePath);
+            if (!check.exists()) {
+                exists = false;
+                System.out.println("This file does not exit, please try again!");
+            } else {
+                exists = true;
+            }
+        } while (!exists);
         sc.close();
+    }
+
+    /**
+     * Shows the user debug information if he wants to see it
+     * @param debugInput The text to show as Debug info
+     */
+    public void displayDebugInformation(String debugInput) {
+        if (showDebug)
+            System.out.println("DEBUG INFORMATION > " + debugInput);
     }
 }

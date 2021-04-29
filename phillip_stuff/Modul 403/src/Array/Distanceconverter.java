@@ -26,6 +26,12 @@ public class Distanceconverter {
             double length = 0;
 
             String einheit[] = {"Meter", "Meilen", "Seemeilen", "Yard", "Inches"};
+            double berechnung[][] = {{1.0, 0.000621371, 0.0005399, 1.09361, 39.3701},
+                    {1609.34, 1.0, 0.868976, 1760.0, 63360.0},
+                    {1852.216, 1.15078, 1.0, 2025.37, 72913.4},
+                    {0.9144, 0.000568182, 0.000493737, 1.0, 36},
+                    {0.0254, 0.000015783, 0.000013715, 0.0277778, 1.0},
+            };
             System.out.println("1 = " + einheit[0] + " 2 = " + einheit[1] + " 3 = " + einheit[2] + " 4 = " + einheit[3] + " 5 = " + einheit[4]);
 
             while (length <= 0) {
